@@ -148,6 +148,7 @@ background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   margin: 0;
   padding: 0;
   list-style: none;
+  z-index: 999;
 }
 
 .nav-menu > ul > li {
@@ -220,7 +221,7 @@ background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   position: fixed;
   right: 15px;
   top: 15px;
-  z-index: 9998;
+  z-index: 9999;
   border: 0;
   background: none;
   font-size: 24px;
@@ -282,7 +283,7 @@ background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 
 #hero .btn-scroll {
   transition: 0.4s;
-  color: rgba(51, 38, 232, 0.631);
+  color:rgb(252, 175, 175) ;
   padding-top: 10rem;
   animation: up-down 1s ease-in-out infinite alternate-reverse both;
   text-align: center;
@@ -305,6 +306,8 @@ background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   font-weight: 700;
   line-height: 56px;
   color: rgba(255, 255, 255, 0.849);
+  animation: bounce; 
+  animation-duration: 2s;
 }
 
 #hero p {

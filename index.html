@@ -33,6 +33,8 @@
       rel="stylesheet"
     />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css" />
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
@@ -51,21 +53,21 @@
     >
       <nav class="nav-menu">
         <ul>
-          <li class="active">
+          <li class="active navbtn">
             <a href="#hero"><i class="icofont-home"></i> <span>Home</span></a>
           </li>
           <li>
-            <a href="#aboutus"
+            <a class="navbtn1" href="#aboutus"
               ><i class="icofont-user-alt-7"></i> <span>About</span></a
             >
           </li>
           <li>
-            <a href="#skill"
+            <a class="navbtn2" href="#skill"
               ><i class="icofont-ui-keyboard"></i> <span>Skill</span></a
             >
           </li>
           <li>
-            <a href="#resume"
+            <a class="navbtn3" href="#resume"
               ><i class="icofont-papers"></i> <span>Resume</span></a
             >
           </li>
@@ -75,12 +77,12 @@
             >
           </li> -->
           <li>
-            <a href="#services"
+            <a class="navbtn4" href="#services"
               ><i class="bx bx-server"></i> <span>Services</span></a
             >
           </li>
           <li>
-            <a href="#contact"
+            <a class="navbtn5" href="#contact"
               ><i class="bx bx-envelope"></i> <span>Contact</span></a
             >
           </li> 
@@ -93,7 +95,7 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center">
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>Kpn_Dev</h1>
+        <h1 class="kpn">Kpn_Dev</h1>
         <p>
           I'm
           <span
@@ -103,10 +105,10 @@
         </p>
         <div class="social-links overlay">
           
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="#" class="git"
+          <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="instagram" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="linkedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="github" class="git"
           ><i class="icofont-github"></i></a>
         </div>
       </div>
@@ -476,7 +478,7 @@
 
           <div class="row">
             <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch "
+              class="col-lg-4 col-md-6 d-flex align-items-stretch  serv"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
@@ -509,7 +511,7 @@
             </div>
 
             <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
+              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 serv"
               data-aos="zoom-in"
               data-aos-delay="200"
             >
@@ -540,7 +542,7 @@
             </div>
 
             <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
+              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0 serv"
               data-aos="zoom-in"
               data-aos-delay="300"
             >
@@ -749,8 +751,82 @@
     <script src="assets/js/js/jquery.waypoints.min.js"></script>
     <script src="assets/js/js/simplyCountdown.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+
     <script>
       $(".counter").countUp();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" ></script>
+    <script>
+    anime({
+  targets: '.btn-scroll',
+  translateY: [100, 250],
+  easing: 'easeInOutQuad',
+  direction: 'alternate',
+  loop: true
+});
+    </script>
+    <script>
+      //edit main.js nav section animation
+      anime({
+  targets: '.navbtn',
+  translateX: 250,
+  rotate: 360,
+  duration: 1000,
+  endDelay: 1000,
+  direction: 'alternate',
+  easing: 'easeInOutSine'
+});
+
+anime({
+  targets: '.navbtn1',
+  translateX: 250,
+  direction: 'reverse',
+  easing: 'easeInOutSine'
+});
+
+anime({
+  targets: '.navbtn2',
+  translateX: 250,
+  direction: 'alternative',
+  easing: 'easeInOutSine'
+});
+
+anime({
+  targets: '.navbtn2',
+  translateX: 250,
+  direction: 'reverse',
+  easing: 'easeInOutSine'
+});
+
+anime({
+  targets: '.navbtn3',
+  translateX: 250,
+  direction: 'reverse',
+  easing: 'easeInOutSine'
+});
+
+anime({
+  targets: '.navbtn4',
+  translateX: 250,
+  direction: 'reverse',
+  easing: 'easeInOutSine'
+});
+
+anime({
+  targets: '.navbtn5',
+  translateX: 250,
+  direction: 'reverse',
+  easing: 'easeInOutSine'
+});
+    </script>
+
+    
+    <script>
+      const t1 = gsap.timeline({ defaults: { ease: 'power1.out'}});
+
+      t1.to(".text",{ y: "0%",  durations: 1, stagger: 0.25 });
+    </script>
+
   </body>
 </html>
