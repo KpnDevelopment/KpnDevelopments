@@ -78,6 +78,7 @@
       }
     }
   });
+  
 
   // Navigation active state on scroll
   var nav_sections = $('section');

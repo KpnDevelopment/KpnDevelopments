@@ -305,9 +305,10 @@ background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: rgba(255, 255, 255, 0.849);
-  animation: bounce; 
-  animation-duration: 2s;
+  color: #ddd;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 #hero p {
@@ -747,6 +748,7 @@ background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 .services .iconbox-teal:hover .icon path {
   fill: #11dbcf;
 }
+
 
 /*--------------------------------------------------------------
 # Contact Me
